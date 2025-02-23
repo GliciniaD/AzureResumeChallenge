@@ -1,10 +1,9 @@
-//Given the fact that HTML has already been uploaded, I'll just embed the javascript below within the HTML file rather than upload js file
 
 window.addEventListener('DOMContentLoaded', () => {
     getVisitorCount(); // Call function when the page loads
 });
 
-const functionApi = "https://functionforapichunk28494.azurewebsites.net/api/updatecounter/global_visitor_count?code=TVdo3unWgaEdIrp9iRASwDtZNB4F7MV2jVMvmbzw3hf7AzFupP2rMA=="; // Replace with your actual API endpoint
+const functionApi = process.env.MY_FUNCTION_KEY; //  API endpoint hidden 
 
 const getVisitorCount = () => {
     fetch(functionApi)
