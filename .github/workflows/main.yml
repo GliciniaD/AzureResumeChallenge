@@ -29,6 +29,7 @@ jobs:
             --account-name storageaccount280495 \
             --destination '$web' \
             --source ./FrontEnd \
+            --account-key ${{ secrets.AZURE_STORAGE_KEY }} \
             --overwrite
 
   deploy-backend:
