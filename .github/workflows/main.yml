@@ -24,8 +24,8 @@ jobs:
           inlineScript: |
             az storage blob upload-batch \
               --account-name storageaccount280495 \
-              --source ./FrontEnd \  # Path to your front-end files
               --destination \$web \
+              --source ./FrontEnd \  
               --overwrite
 
   deploy-backend:
