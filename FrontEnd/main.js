@@ -1,9 +1,8 @@
-
 window.addEventListener('DOMContentLoaded', () => {
     getVisitorCount(); // Call function when the page loads
 });
 
-const functionApi = process.env.MY_FUNCTION_KEY; //hidden 
+const functionApi ='https://visitorcountapim.azure-api.net/visitor-count/updatecounter/global_visitor_count '
 
 const getVisitorCount = () => {
     fetch(functionApi)
