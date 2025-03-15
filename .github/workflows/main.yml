@@ -24,7 +24,7 @@ jobs:
           inlineScript: |
             az storage blob upload-batch \
               --account-name storageaccount280495 \
-              --destination $web \
+              --destination '$web' \
               --source ./FrontEnd \  
               --overwrite
 
