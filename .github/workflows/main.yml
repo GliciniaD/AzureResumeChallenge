@@ -26,10 +26,10 @@ jobs:
           azcliversion: latest
           inlineScript: |
             az storage blob upload-batch \
-              --account-name storageaccount280495 \
-              --destination \$web \
-              --source ./FrontEnd \  
-              --overwrite
+            --account-name storageaccount280495 \
+            --destination '$web' \
+            --source ./FrontEnd \
+            --overwrite
 
   deploy-backend:
     runs-on: ubuntu-latest
