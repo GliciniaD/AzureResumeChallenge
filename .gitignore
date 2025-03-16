@@ -48,3 +48,8 @@ __queuestorage__
 __azurite_db*__.json
 
 
+#Studd I may want to keep but get ignored by git when redoing things
+extensions.json
+launch.json
+settings.json
+tasks.json
