@@ -64,12 +64,6 @@ jobs:
             exit 1
           fi
 
-      - name: Upload ZIP artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-archive
-          path: my-archive.zip
-
       - name: Deploy Backend (Azure Functions)
         uses: Azure/functions-action@v1
         with:
