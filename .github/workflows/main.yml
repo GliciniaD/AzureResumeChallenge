@@ -41,6 +41,13 @@ jobs:
       - name: List files in directory
         run: ls -R
 
+      - name: Verify files to zip exist
+      run: |
+        if [ -z "$(ls -A)" ]; then
+          echo "Error: No files found to zip!"
+          exit 1
+        fi
+        
       - name: Create ZIP file
         run: zip -vr my-archive.zip .
 
@@ -49,6 +56,13 @@ jobs:
 
       - name: Check ZIP file size
         run: du -h my-archive.zip
+
+      - name: Verify ZIP file exists
+        run: |
+          if [ ! -f my-archive.zip ]; then
+            echo "Error: my-archive.zip does not exist!"
+            exit 1
+          fi
 
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v3
@@ -61,4 +75,4 @@ jobs:
         with:
           app-name: FunctionForAPIChunk28494
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-          package: 'Function App Folder'
+          package: my-archive.zip  # Updated to point to the ZIP file
