@@ -19,7 +19,7 @@ jobs:
 
       - name: List files (for debugging)
         run: ls -R ./FrontEnd
-          
+
       - name: Deploy Frontend to Azure Storage
         uses: azure/CLI@v1
         with:
@@ -42,12 +42,12 @@ jobs:
         run: ls -R
 
       - name: Verify files to zip exist
-      run: |
-        if [ -z "$(ls -A)" ]; then
-          echo "Error: No files found to zip!"
-          exit 1
-        fi
-        
+        run: |
+          if [ -z "$(ls -A)" ]; then
+            echo "Error: No files found to zip!"
+            exit 1
+          fi
+
       - name: Create ZIP file
         run: zip -vr my-archive.zip .
 
@@ -75,4 +75,4 @@ jobs:
         with:
           app-name: FunctionForAPIChunk28494
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-          package: my-archive.zip  # Updated to point to the ZIP file
+          package: my-archive.zip
