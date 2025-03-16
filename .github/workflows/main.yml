@@ -65,7 +65,7 @@ jobs:
           fi
 
       - name: Upload ZIP artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: my-archive
           path: my-archive.zip
