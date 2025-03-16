@@ -38,6 +38,24 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: List files in directory
+        run: ls -R
+
+      - name: Create ZIP file
+        run: zip -vr my-archive.zip .
+
+      - name: Test ZIP file integrity
+        run: unzip -t my-archive.zip
+
+      - name: Check ZIP file size
+        run: du -h my-archive.zip
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-archive
+          path: my-archive.zip
+
       - name: Deploy Backend (Azure Functions)
         uses: Azure/functions-action@v1
         with:
