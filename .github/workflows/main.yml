@@ -38,31 +38,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: List files in directory
+      - name: List files in directory (for debugging)
         run: ls -R
 
-      - name: Verify files to zip exist
-        run: |
-          if [ -z "$(ls -A)" ]; then
-            echo "Error: No files found to zip!"
-            exit 1
-          fi
+      - name: Install dependencies
+        run: npm install
 
       - name: Create ZIP file
-        run: zip -vr my-archive.zip .
+        run: |
+          zip -r my-archive.zip . \
+          -x ".git/*" ".github/*" "FrontEnd/*" "node_modules/*"
 
       - name: Test ZIP file integrity
         run: unzip -t my-archive.zip
 
       - name: Check ZIP file size
         run: du -h my-archive.zip
-
-      - name: Verify ZIP file exists
-        run: |
-          if [ ! -f my-archive.zip ]; then
-            echo "Error: my-archive.zip does not exist!"
-            exit 1
-          fi
 
       - name: Deploy Backend (Azure Functions)
         uses: Azure/functions-action@v1
