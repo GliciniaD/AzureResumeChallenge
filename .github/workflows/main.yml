@@ -63,4 +63,5 @@ jobs:
           package: my-archive.zip
           app-settings: |
             WEBSITE_CONTENTAZUREFILECONNECTIONSTRING=${{ secrets.WEBSITE_CONTENTAZUREFILECONNECTIONSTRING }}
+            WEBSITE_CONTENTSHARE=${{ secrets.WEBSITE_CONTENTSHARE }}
             AzureWebJobsStorage=${{ secrets.AZURE_WEB_JOBS_STORAGE }}
