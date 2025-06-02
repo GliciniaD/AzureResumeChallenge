@@ -1,0 +1,73 @@
+
+
+.page-wrapper2 {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* pale white, semi-transparent */
+    border-radius: 85px;
+    padding: 20px;
+    /* space inside the container */
+    margin: 2%;
+    /* outer spacing, matches your design */
+    backdrop-filter: blur(4px);
+    /* optional: subtle background blur */
+}
+
+/*  Customising Backgroun pic + Margins*/
+body {
+    background-image: url(BlueSky.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center; 
+}
+
+/* Customised Heading 1 */
+h1 {
+    color: Off darkgrey;
+    font-size: 5vw;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+/*  Customising Headings2 */
+h2 {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*  Customising normal text*/
+p {
+    color: black;
+    font-size: 2vw;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Making links have the same formatting as paragraphs*/
+a {
+    color: black;
+    font-size: 2vw;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*  Centering Bullet points -alongside text*/
+ul {
+    display: inline-block;
+    /* allows the list to be centered as a block */
+    text-align: left;
+    /* keeps bullets and text aligned properly */
+    margin: auto;
+    /* centers the whole <ul> */
+}
+
+/* Making lists have the same as paragraphs */
+li {
+        color: black; 
+        font-size: 2vw;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
