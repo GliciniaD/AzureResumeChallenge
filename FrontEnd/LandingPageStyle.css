@@ -1,10 +1,14 @@
 
-.page-wrapper {
-    background-color: rgba(255, 255, 255, 0.7); 
+.page-wrapper{
+    background-color: rgba(255, 255, 255, 0.7);
+    /* pale white, semi-transparent */
     border-radius: 85px;
-    padding: 20px; /* space inside the container */
-    margin: 2%; /* outer spacing, matches your design */
-    backdrop-filter: blur(4px); /*subtle background blur */
+    padding: 20px;
+    /* space inside the container */
+    margin: 2%;
+    /* outer spacing, matches your design */
+    backdrop-filter: blur(4px);
+    /* optional: subtle background blur */
 }
 
 
