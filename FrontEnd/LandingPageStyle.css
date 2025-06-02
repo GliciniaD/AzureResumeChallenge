@@ -1,34 +1,37 @@
+/* That white navigation bar thingy*/
+.page-wrapper {
+    background-color: rgba(255, 255, 255, 0.7); /* pale white, semi-transparent */
+    border-radius: 85px;
+    padding: 20px; /* space inside the container */
+    margin: 2%; /* outer spacing, matches your design */
+    backdrop-filter: blur(4px); /* optional: subtle background blur */
+}
 
+
+/* Customised Heading 1 */
+h1 {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+}
+
+/*  Customising Headings2 */
+h2 {
+    text-align: center;
+    font-family: 'Great Vibes';
+}
+
+/*  Customising Backgroun pic + Margins*/
 body {
-    background-image:url(Blue\ Sky.jpg);
+    background-image:url(BlueSky.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    margin: 2%;
-    border-style: solid;
-    border-color: white;
-    border-radius: 85px;
 }
 
-h1 {color:white;
-    font-size: 60px;
-    text-align: center;}
-
-h2 {text-align: center;
-font-family:'Great Vibes';}
-
+/*  Customising normal text*/
 p {color: white;
 font-size: 44px;
 text-align: center}
 
-nav {
-    text-align: center;
-    z-index:1;
-    background-color: rgba(240, 255, 255, 0.515);
-    line-height: 55px; 
-    width: 100%;
-    padding-bottom: 5%;
-    }
-
-nav ul li {display:inline-table;}
 
