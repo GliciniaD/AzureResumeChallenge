@@ -1,22 +1,31 @@
 
-.page-wrapper2 {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 85px;
-    padding: 2rem;
-    margin: 5vw;
-    backdrop-filter: blur(4px);
-    max-width: 90vw;
-    min-height: 80vh;
-    box-sizing: border-box;
-}
-
-/*  Customising Backgroun pic + Margins*/
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(BlueSky.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    text-align: center; 
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 85px;
+    padding: 2rem;
+    margin: 5vw;
+    /* creates space on all sides */
+    min-height: calc(100vh - 12vw);
+    /* leaves a bit of space at the bottom */
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
 }
 
 /* Customised Heading 1 */
