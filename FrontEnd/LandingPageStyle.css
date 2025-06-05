@@ -1,4 +1,4 @@
-/* Make body fill screen and center content */
+
 body {
     display: flex;
     justify-content: center;
