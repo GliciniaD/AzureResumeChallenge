@@ -1,9 +1,26 @@
-.page-wrapper{
+/* Make body fill screen and center content */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(BlueSky.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.page-wrapper {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 85px;
-    padding: 20px; 
-    margin: 2%;
+    padding: 2rem;
+    margin: 5vw;
     backdrop-filter: blur(4px);
+    max-width: 90vw;
+    min-height: 80vh;
+    box-sizing: border-box;
 }
 
 /* Customised Heading 1 */
@@ -18,14 +35,6 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'Great Vibes';
-}
-
-/*  Customising Backgroun pic + Margins*/
-body {
-    background-image:url(BlueSky.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 /*  Customising normal text*/

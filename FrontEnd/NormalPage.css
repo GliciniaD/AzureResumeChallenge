@@ -2,21 +2,12 @@
 .page-wrapper2 {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 85px;
-    padding: 20px;
-    margin: 2%;
+    padding: 2rem;
+    margin: 5vw;
     backdrop-filter: blur(4px);
-}
-
-/* Media query for small screens (phones) */
-@media (max-width: 600px) {
-    .page-wrapper {
-        margin: 5% 3%;
-        /* a bit more margin on smaller screens */
-        padding: 15px;
-        /* reduce padding so content fits better */
-        border-radius: 40px;
-        /* smaller rounding for smaller screen */
-    }
+    max-width: 90vw;
+    min-height: 80vh;
+    box-sizing: border-box;
 }
 
 /*  Customising Backgroun pic + Margins*/
