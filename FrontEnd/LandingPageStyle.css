@@ -7,26 +7,39 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    text-align: center;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+    height: 95%;
+    margin: 2.5 vh;
     padding: 0;
 }
 
 .page-wrapper {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 85px;
-    padding: 2rem;
-    margin: 5vw;
-    /* creates space on all sides */
-    min-height: calc(100vh - 12vw);
-    /* leaves a bit of space at the bottom */
-    box-sizing: border-box;
-    backdrop-filter: blur(4px);
-}
+    height: 90vh;
+        width: 90vw;
+        overflow-y: auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 30px;
+        padding: 20px;
+        /* centers wrapper vertically and horizontally */
+        backdrop-filter: blur(4px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        /* optional: makes it stand out */ 
+    
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* vertical */
+            align-items: center;
+            /* horizontal */
+            text-align: center;
+    
+    }
+
+
 
 /* Customised Heading 1 */
 h1 {
@@ -40,11 +53,12 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'Great Vibes';
+    font-size: 2.5vw;
 }
 
 /*  Customising normal text*/
 p {color: white;
-font-size:2vw;
+font-size:1.5vw;
 text-align: center;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 
@@ -64,7 +78,7 @@ nav ul li {
 /*Making links have the same formatting as paragraphs*/
 a {
     color: black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

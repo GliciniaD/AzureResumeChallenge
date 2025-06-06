@@ -1,4 +1,3 @@
-
 body {
     display: flex;
     justify-content: center;
@@ -12,36 +11,39 @@ body {
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+    height: 95%;
+    margin: 2.5vh;
     padding: 0;
-
 }
-/*jnjn*/
+
 .page-wrapper2 {
+    height: 90vh;
+    /* Responsive height: 90% of the viewport */
+    width: 90vw;
+    /* Responsive width: 90% of the viewport */
+    overflow-y: auto;
+    /* Enables vertical scrolling inside the wrapper */
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 85px;
-    padding: 2rem;
-    margin: 5vw;
-    /* creates space on all sides */
-    min-height: calc(100vh - 12vw);
-    /* leaves a bit of space at the bottom */
-    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 5vh auto;
+    /* centers wrapper vertically and horizontally */
     backdrop-filter: blur(4px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* optional: makes it stand out */
 }
 
 /* Customised Heading 1 */
 h1 {
     color: Off darkgrey;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-
 /*  Customising Headings2 */
 h2 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -50,7 +52,7 @@ h2 {
 /*  Customising normal text*/
 p {
     color: black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -58,7 +60,7 @@ p {
 /*Making links have the same formatting as paragraphs*/
 a {
     color: black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -75,8 +77,8 @@ ul {
 
 /* Making lists have the same as paragraphs */
 li {
-        color: black; 
-        font-size: 2vw;
+    color: black;
+        font-size: 1.5vw;
         text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
