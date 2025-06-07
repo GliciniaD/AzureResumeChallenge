@@ -13,12 +13,11 @@ body {
 html,
 body {
     height: 95%;
-    margin: 2.5vh;
     padding: 0;
 }
 
 .page-wrapper {
-    height: 90vh;
+    max-height: 90vh;
         width: 90vw;
         overflow-y: auto;
         background-color: rgba(255, 255, 255, 0.7);
@@ -38,35 +37,6 @@ body {
             text-align: center;
     
     }
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    body {
-        margin: 5vh 4vw;
-    }
-
-    .page-wrapper {
-        width: 100%;
-        height: auto;
-        /* let it grow with content */
-        padding: 8vh 5vw;
-        border-radius: 20px;
-        box-sizing: border-box;
-    }
-            h1 {
-                font-size: clamp(2.5rem, 12vw, 3.5rem);
-            }
-    
-            h2 {
-                font-size: clamp(2.2rem, 10vw, 3rem);
-            }
-    
-            p {
-                font-size: clamp(2rem, 10vw, 3rem);     }
-
-}
-
-
 
 /* Customised Heading 1 */
 h1 {
@@ -108,4 +78,37 @@ a {
     font-size: 1.5vw;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        margin: 5vh 4vw;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        height: auto;
+        padding: 8vh 5vw;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 2.8vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 1vw, 1.3rem);    }
+
+    a{
+        font-size: clamp(1rem, 1vw, 1.3rem);
+        }
+
 }

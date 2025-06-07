@@ -11,26 +11,21 @@ body {
 
 html,
 body {
-    height: 95%;
-    margin: 2.5vh;
+    min-height: 95%;
+    margin: 0;
     padding: 0;
 }
 
 .page-wrapper2 {
-    height: 90vh;
-    /* Responsive height: 90% of the viewport */
+    min-height: 90vh;
     width: 90vw;
-    /* Responsive width: 90% of the viewport */
     overflow-y: auto;
-    /* Enables vertical scrolling inside the wrapper */
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     padding: 20px;
     margin: 5vh auto;
-    /* centers wrapper vertically and horizontally */
     backdrop-filter: blur(4px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    /* optional: makes it stand out */
 }
 
 /* Customised Heading 1 */
@@ -81,4 +76,38 @@ li {
         font-size: 1.5vw;
         text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        display: block;
+        margin: 5vh 4vw;
+    }
+
+    .page-wrapper2 {
+        width: 100%;
+        height: auto;
+        padding: 8vh 5vw;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 2.8vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 1vw, 1.3rem);
+    }
+
+    a {
+        font-size: clamp(1rem, 1vw, 1.3rem);
+    }
+
 }
