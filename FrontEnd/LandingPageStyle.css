@@ -13,7 +13,7 @@ body {
 html,
 body {
     height: 95%;
-    margin: 2.5 vh;
+    margin: 2.5vh;
     padding: 0;
 }
 
@@ -38,6 +38,33 @@ body {
             text-align: center;
     
     }
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        margin: 5vh 4vw;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        height: auto;
+        /* let it grow with content */
+        padding: 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+            h1 {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+    
+            h2 {
+                font-size: clamp(1.6rem, 8vw, 2.2rem);
+            }
+    
+            p {
+                font-size: clamp(1.2rem, 6vw, 1.6rem);     }
+
+}
 
 
 
