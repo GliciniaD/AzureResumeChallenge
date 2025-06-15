@@ -102,7 +102,7 @@ li {
         font-size: clamp(1.4rem, 2.8vw, 2rem);
     }
 
-    p {
+    ul,li,p {
         font-size: clamp(1rem, 1vw, 1.3rem);
     }
 
