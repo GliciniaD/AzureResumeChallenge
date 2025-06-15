@@ -13,62 +13,61 @@
     <div class="page-wrapper2">
     <H1> Blog post </H1>
     
-    <p style="font-weight: bolder;"> ...me? What are the chances?</p>
-    <p>
-        The chances of me finishing this project did not look great at the start: <br>
-        - I was a full-time career transitioner who never attended any IT course <br>
-        - Virtually 0 experience of the portal <br>
-        - I did not know what a command line was until 2023! <br>
-        ….and I was supposed to create a cloud-based resume? Yikes!
-        <br>
-        <br>
-        To say that this project was easy would be me lying. But you are reading this...which means I am very stubborn
+    <p style="font-weight: bolder;"> What is this project and why was it done?</p>
+
+    <p> What you see here is the Azure Resume challenge completed. Essentially, the aim was to: </p>
+        <ul style="list-style-type: none"> 
+            <li> 1) create static website ( using Azure storage)</li>
+            <li> 2) embed a visitor counter (using Azure Functions and cosmos database)</li>
+            <li> 3) Set up CI/CD workflow (Github)</li>    
+        </ul>
+        <p> I wanted to complete this project as I'm an aspiring cloud engineer and wanted to gain practical experience of: deploying and connecting services,  troubleshooting and scripting. </p>
+
+    <p style="font-weight: bolder;"> ...me? What were the chances?</p>
+    <ul style="list-style-type: none">
+        <li> Virtually zero experience of the portal</li>
+        <li> I did not know what a command line was until 2023</li>
+        <li> I was a full-time career transitioner who never attended an in-depht IT course</li>
+    </ul>
+    <p>To say that this project was easy would be me lying. But you are reading this...which means I am very stubborn
         (un)fortunately.</p>
 <br>
-    <p style="font-weight: bolder;"> Mindset shift required to stay resilient: Fail often, FaiL forward</p>
+    <p style="font-weight: bolder;"> Mindset shift required to stay resilient: Fail often, Fail forward</p>
 
-
-    <p>Have you ever heard about the 4 stages of competency? It a model that talks about the different stages of learning a new
+    <p>Have you ever heard about the 4 stages of competency? It's a model that talks about the different stages of learning a new
     skill:    </p>
+
+    <img src="Four-Stages-of-Competence (1).jpg" alt="Image showcasing the 4 stages of learning: unconscious incompetence, conscious incompetence, Conscious competence and unconscious competence" style="width: 50vw; height: auto;">
 
     <p> For me, each new stage was me jumping back and forth between the “unconscious incompetence” and “conscious
     incompetence”. In summary, I learned a whole lot about what I didn’t know. It was humbling shift in identity. During the
-    day I was confident and even mentored new starters and during the evenings I became a beginner. Every step involved
-    words and contexts I’ve never heard of. There was a lot of stopping, to understand and research and try. Then return to
-    the challenge and stopping to troubleshoot. This happened multiple times, and sometimes in cycles. 
-    My motto had to become "fail often, fait forward".. so much so that I celebrated having a different error, rather than the same one! </p>
+    day, while working as an associate psychologist, I was confident and even mentored new starters and during the evenings I became a beginner. Every step involved words and contexts I had never heard of. There was a lot of stopping, to understand and research and try. Then, I'd return to the challenge and troubleshoot. This happened multiple times, and sometimes in cycles. 
+    My motto had to become "fail often, fail forward"... so much so that I celebrated having a different error, rather than the same one! </p>
 
     <p style="font-weight: bolder;"> My favourite mistakes</p>
 
+    <p> 1) Folder organisation is a must! <br> </p>
+
     <p>
-    1) I didn’t realise how important essential file placements and local folder structures were for deployment and CI/CI.
-    I remember attempting to deploy Azure Functions multiple times using ARM. At first the function couldn’t be found. When
-    that was solved, it did not recognise that the runtime was Python. After days of troubleshooting, I giggled out of
-    desperation and tiredness and desperation when I realised that all I needed to do was to organise my folders and files
-    better! However I clearly didn’t learn so I life thought me a lesson. When I connected it to GitHub- it basically said
-    it couldn’t open the zip file it had automatically created from local repository. Again, desperation just to find out I
-    had collected a bunch of unnecessary files which was confusing the workflow. Lesson learned for sure!
-    <br>
-    <br>
-    2) I was humbled by the ARM template (lack of direction) but learned how co-dependent some Azure resources are. I guess
-    I had failed to realise how many services are co-dependant on others. For example, I thought I would simply create the
-    function app and that it would be a breeze! Soon realised I needed storage so I added it. And then realised I needed a
-    service plan…and then storage and finally application insights! 
-    <br>
-    <br>
-    3) (almost) bankrupt lead to the birth of the cost optimisation queen!
-        The quickest tool I learned how to use was the cost management tab!
-        This was the first time I had ventured into Azure and was worries about racking up a bill!
-        At the start of my project I had initially chosen Azure front door to host my static website however the forecast cost
-        wasn’t looking good. So I did my research and realised that
-        Azure CND would be as good!
-        Side note, I became so good at it that Azure advise doesn’t even have any more suggestions!
-    <br>
-    <br>
-        I was relentlessly bullied by error logs however I am proud of my resilience and proud to say that I am at the
-        “conscious competence stage”!
+    I didn’t realise how important essential file placements and local folder structures were for deployment and CI/CI.
+    I remember attempting to deploy Azure Functions multiple times using ARM but the function code couldn’t be found.
+    After days of troubleshooting, I giggled out of tiredness when I realised that all I needed to do was to organise my folders and files better! However, I clearly hadn't learn it wekk so I life taught me the same lesson...twice! 
+    I was trying to set up the GitHub workflow, but I one point I kept coming across an error relating to not being able to open a zip file it had automatically created from local repository. Again, a lot desperation just to find out I had collected and upload a bunch of unnecessary files which was confusing the workflow. Lesson learned for sure! Here's the screenshot of the success :) <br> <br>
+    <img src="GitHub Workflow working.jpg" alt="Image of sucessful Github Workflow" style="width: 50vw; height: auto;">
+    <br></p>
     
-    </p>   
+    <p> 2) So many dependencies! </p>
+    <p> My first attempt to create the function app ARM template was a lot of troubleshooting. 
+    Prior to that, I had attempted to create resources using the portal (which creates required dependent resources such as Storage) automatically. 
+    Due to that, naively, I assumed that if I wanted the create the Function app using ARM templates,all I'd need to do is to mentioned I wanted Functions created and that Azure would read my mind and create the rest of the dependencies! However the error logs soon corrected me! It was then that I realised i needed storage, so I added it. And then realised I needed a service plan…and then application insights! I truly understood how co-dependent some Azure resources are. I will not take for granted all the automatic work that the portal does for us...ever again!
+    </p>
+
+    <p> 3) Bankruptcy while trying to make this project? Not me!</p>
+    <p> I must admit that the quickest tool I learned how to use was the cost management tab! This was the first time I had ventured into Azure services and was worried about racking up a bill accidentally. At the start of my project I had initially chosen Azure front door to host my static website however the forecast cost began to look pricey (for a project that was meant to be virtually free). So I did my research and realised that Azure CND would be as good!
+    I became so good at it that Azure advise doesn’t even have any more suggestions on how I can optimise my costs!</p>
+    <br>
+    <br>
+    <p>I was relentlessly bullied by error logs however I am proud of my resilience (aka stubbornness!) </p>   
 
     <a href="./LandingPage.html"> Homepage </a>
     &nbsp; | &nbsp;
